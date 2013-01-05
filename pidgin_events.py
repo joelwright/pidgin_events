@@ -30,9 +30,9 @@ from HTMLParser import HTMLParser
 # Config params
 message_timeout = 30
 change_timeout = 10
-status_pipe = '/home/jjw/.xmonad/pipes/status'
-messge_pipe = '/home/jjw/.xmonad/pipes/messge'
-change_pipe = '/home/jjw/.xmonad/pipes/change'
+status_pipe = '<</path/to/status_pipe>>'
+messge_pipe = '<</path/to/message_pipe>>'
+change_pipe = '<</path/to/change_pipe>>'
 
 # Status dict
 status = {

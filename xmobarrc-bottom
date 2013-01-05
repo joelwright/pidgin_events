@@ -2,9 +2,9 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
        , bgColor = "black"
        , fgColor = "grey"
        , lowerOnStart = True
-       , commands = [ Run PipeReader "/home/jjw/.xmonad/pipes/status" "status"
-                    , Run PipeReader "/home/jjw/.xmonad/pipes/messge" "messge"
-                    , Run PipeReader "/home/jjw/.xmonad/pipes/change" "change"
+       , commands = [ Run PipeReader "/home/$USER/.xmonad/pipes/status" "status"
+                    , Run PipeReader "/home/$USER/.xmonad/pipes/messge" "messge"
+                    , Run PipeReader "/home/$USER/.xmonad/pipes/change" "change"
                     ]
        , position = Bottom
        , sepChar = "%"
