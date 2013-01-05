@@ -12,6 +12,6 @@ I use 3 FIFO queues for status, message and last message time. These can
 be made using the "mkfifo" command. The whole setup can then be lauched
 with the following commands:
 
-pidgin_events.py &
-xmobar /path/to/xmobarrc-bottom &
+> pidgin_events.py &
+> xmobar /path/to/xmobarrc-bottom &
 
