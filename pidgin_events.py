@@ -114,11 +114,16 @@ def last_changed():
    last = change_timer.get_last()
    td = d.datetime.now() - last
    timedelta = int(math.floor(td.total_seconds() / 60))
+   hours = int(math.floor(timedelta / 60))
+   minutes = timedelta - (60 * hours)
    change_pipe_file = open(change_pipe, 'w', 0)
    if timedelta < 1:
       change_pipe_file.write(" \n")
    else:
-      change_pipe_file.write("%sm\n" % timedelta)
+      if hours < 1:
+         change_pipe_file.write("%sm\n" % minutes)
+      else:
+         change_pipe_file.write("%sh%sm\n" % (hours,minutes))
    change_pipe_file.close()
 
 def pidgin_quitting():
