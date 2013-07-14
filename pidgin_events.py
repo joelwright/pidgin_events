@@ -98,7 +98,8 @@ def strip_tags(html):
 def show_message(account, sender, message, conversation, flags):
    message_timer.reset()
    messge_pipe_file = open(messge_pipe, 'w', 0)
-   messge_pipe_file.write("%s%s%s\n" % (sender, " : ", strip_tags(message)))
+   sender_username = sender.split('/')[0]
+   messge_pipe_file.write("%s%s%s\n" % (sender_username, " : ", strip_tags(message)))
    messge_pipe_file.close()
    change_timer.reset()
    last_changed()
